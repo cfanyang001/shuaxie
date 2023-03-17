@@ -1,0 +1,23 @@
+<view class="container">
+  <view class="cart-list">
+    <block wx:for="{{cartItems}}" wx:key="id">
+      <view class="cart-item">
+        <image src="{{item.image}}" mode="aspectFit" class="product-image" />
+        <view class="product-info">
+          <text class="product-name">{{item.name}}</text>
+          <text class="product-price">￥{{item.price}}</text>
+        </view>
+        <view class="quantity-controls">
+          <button class="quantity-button" bindtap="decreaseQuantity" data-id="{{item.id}}">-</button>
+          <text class="quantity">{{item.count}}</text>
+          <button class="quantity-button" bindtap="increaseQuantity" data-id="{{item.id}}">+</button>
+        </view>
+        <button class="delete-button" bindtap="deleteItem" data-id="{{item.id}}">删除</button>
+      </view>
+    </block>
+  </view>
+  <view class="cart-summary">
+    <text>总价：￥{{totalPrice}}</text>
+    <button class="checkout-button" bindtap="checkout">结算</button>
+  </view>
+</view>

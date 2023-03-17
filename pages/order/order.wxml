@@ -1,0 +1,35 @@
+<view class="container">
+  <view class="order-status">
+    <text class="status-item" bindtap="changeStatus" data-status="all">全部订单</text>
+    <text class="status-item" bindtap="changeStatus" data-status="pending">待发货</text>
+    <text class="status-item" bindtap="changeStatus" data-status="shipped">已发货</text>
+    <text class="status-item" bindtap="changeStatus" data-status="completed">已完成</text>
+  </view>
+
+  <view class="order-list">
+    <block wx:for="{{orders}}" wx:key="orderId">
+      <view class="order-item">
+        <view class="order-header">
+          <text>订单号：{{item.orderId}}</text>
+          <text>{{item.status}}</text>
+        </view>
+        <view class="order-body">
+          <block wx:for="{{item.products}}" wx:key="id">
+            <view class="product-item">
+              <image src="{{product.image}}" mode="aspectFit" class="product-image" />
+              <view class="product-info">
+                <text class="product-name">{{product.name}}</text>
+                <text class="product-price">￥{{product.price}}</text>
+                <text class="product-quantity">x{{product.count}}</text>
+              </view>
+            </view>
+          </block>
+        </view>
+        <view class="order-footer">
+          <button wx:if="{{item.status === '待发货'}}" class="action-button" bindtap="cancelOrder" data-orderid="{{item.orderId}}">取消订单</button>
+          <button wx:if="{{item.status === '已发货'}}" class="action-button" bindtap="confirmReceipt" data-orderid="{{item.orderId}}">确认收货</button>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

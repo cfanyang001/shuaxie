@@ -1,0 +1,73 @@
+/* order.wxss */
+
+/* 导入全局样式 */
+@import "../../app.wxss";
+
+.order-status {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.status-item {
+  color: #1aad19;
+}
+
+.order-list {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.order-item {
+  background-color: #ffffff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.order-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.product-quantity {
+  margin-left: 10px;
+}
+
+.order-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.action-button {
+  background-color: #1aad19;
+  color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  margin-left: 10px;
+  }

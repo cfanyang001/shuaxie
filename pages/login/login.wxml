@@ -1,0 +1,23 @@
+<view class="container">
+  <view class="logo-container">
+    <image class="logo" src="/resources/images/logo.png" />
+  </view>
+  <view class="input-container">
+    <input
+      class="username-input"
+      type="text"
+      placeholder="请输入用户名"
+      value="{{username}}"
+      bindinput="inputUsername"
+    />
+    <input
+      class="password-input"
+      type="password"
+      placeholder="请输入密码"
+      value="{{password}}"
+      bindinput="inputPassword"
+    />
+  </view>
+  <button class="login-button" bindtap="login">登录</button>
+  <button class="register-button" bindtap="register">注册</button>
+</view>

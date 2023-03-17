@@ -1,0 +1,61 @@
+/* cart.wxss */
+
+/* 导入全局样式 */
+@import "../../app.wxss";
+
+/* 购物车列表样式 */
+.cart-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.quantity-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80px;
+}
+
+.quantity-button {
+  background-color: #1aad19;
+  color: #ffffff;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.delete-button {
+  background-color: #ff4d4f;
+  color: #ffffff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-left: 10px;
+}
+
+/* 购物车结算栏样式 */
+.cart-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-button {
+  background-color: #1aad19;
+  color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 4px;
+}

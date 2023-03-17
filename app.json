@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/product-list/product-list",
+    "pages/cart/cart",
+    "pages/order/order"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "刷鞋小程序",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#1296db",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/product-list/product-list",
+        "text": "商品列表",
+        "iconPath": "resources/images/product-list.png",
+        "selectedIconPath": "resources/images/product-list-active.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "resources/images/cart.png",
+        "selectedIconPath": "resources/images/cart-active.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单",
+        "iconPath": "resources/images/order.png",
+        "selectedIconPath": "resources/images/order-active.png"
+      }
+    ]
+  }
+  
+}

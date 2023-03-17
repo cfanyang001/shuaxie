@@ -1,0 +1,28 @@
+<view class="container">
+  <view class="search-bar">
+    <input
+      type="text"
+      class="search-input"
+      placeholder="搜索商品"
+      bindinput="onSearchInput"
+      value="{{searchValue}}"
+    />
+  </view>
+  <view class="product-list">
+    <block wx:for="{{products}}" wx:key="id">
+      <view class="product-item">
+        <image src="{{item.image}}" mode="aspectFit" class="product-image" />
+        <view class="product-info">
+          <text class="product-name">{{item.name}}</text>
+          <text class="product-price">￥{{item.price}}</text>
+        </view>
+        <button class="add-to-cart" bindtap="addToCart">加入购物车</button>
+      </view>
+    </block>
+  </view>
+  <view class="pagination">
+    <button class="prev-page" bindtap="prevPage">上一页</button>
+    <text class="current-page">{{currentPage}} / {{totalPages}}</text>
+    <button class="next-page" bindtap="nextPage">下一页</button>
+  </view>
+</view>
