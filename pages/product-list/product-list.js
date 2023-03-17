@@ -11,11 +11,24 @@ Page({
       searchValue: event.detail.value,
     });
   },
-
-  addToCart: function () {
-    // 实现添加到购物车的逻辑，如将商品信息添加到本地存储或全局数据
+  addToCart: function(e) {
+    // 获取选中的商品信息
+    const product = e.currentTarget.dataset.product;
+  
+    // 获取全局购物车数据
+    const cartItems = getApp().globalData.cartItems;
+  
+    // 检查购物车中是否已存在该商品，如果存在则增加数量，否则添加新商品
+    const existingItem = cartItems.find(item => item.id === product.id);
+    if (existingItem) {
+      existingItem.quantity += 1;
+    } else {
+      cartItems.push({
+        ...product,
+        quantity: 1
+      });
+    }
   },
-
   prevPage: function () {
     if (this.data.currentPage > 1) {
       this.setData({

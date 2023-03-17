@@ -10,7 +10,9 @@ App({
       wx.setStorageSync('cart', []);
     }
   },
-
+  globalData: {
+    cartItems: []
+  },
   onShow: function () {
     // 当小程序启动，或从后台进入前台显示时执行的代码
     console.log('小程序显示');

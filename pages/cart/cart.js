@@ -12,6 +12,13 @@ Page({
 
   onShow: function () {
     this.updateCartData();
+    this.getCartItems();
+  },
+  getCartItems: function () {
+    const cartItems = getApp().globalData.cartItems;
+    this.setData({
+      cartItems: cartItems
+    });
   },
 
   updateCartData: function () {
