@@ -1,4 +1,3 @@
 <view class="container">
-  <audio-player audioSrc="http://downsc.chinaz.net/Files/DownLoad/sound1/201906/11582.mp3"></audio-player>
-  <!-- 其他页面内容 -->
+  <audio-player audioSrc="https://kodi:Aa12345678@192.168.3.38:5006/test/bb.mp3" displayPath="test/aa.mp3" ></audio-player>
 </view>

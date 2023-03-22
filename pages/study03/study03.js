@@ -51,7 +51,43 @@ Page({
     })
     
   },
-
+  getLocation() {
+    wx.getLocation({
+      type: 'gcj02',
+      success: (res) => {
+        const latitude = res.latitude
+        const longitude = res.longitude
+        const mapCtx = wx.createMapContext('myMap')
+        mapCtx.moveToLocation({
+          latitude,
+          longitude,
+          success(res) {
+            mapCtx.addMarker({
+              iconPath: '/images/location.png',
+              width: 32,
+              height: 32,
+              latitude,
+              longitude,
+              callout: {
+                content: '您当前的位置',
+                fontSize: 14,
+                borderRadius: 5,
+                bgColor: '#ffffff',
+                padding: 5,
+                display: 'ALWAYS'
+              }
+            })
+          }
+        })
+      },
+      fail: (res) => {
+        wx.showToast({
+          title: '获取地理位置失败',
+          icon: 'none'
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

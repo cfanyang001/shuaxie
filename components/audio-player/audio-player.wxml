@@ -1,7 +1,23 @@
 <view class="audio-player">
-  <button bindtap="playAudio">播放</button>
-  <button bindtap="pauseAudio">暂停</button>
-  <button bindtap="rewindAudio">快退 3 秒</button>
-  <button bindtap="fastForwardAudio">快进 3 秒</button>
-  <button bindtap="changePlaybackRate">切换播放速度</button>
+  <text class="display-path">{{displayPath}}</text>
+  <view class="progress-container">
+    <text class="progress-text" style="color:blue">{{formatTime(currentTime)}} / {{formatTime(duration)}}</text>
+    <slider class="progress-slider" min="0" max="{{duration}}" value="{{currentTime}}" bindchange="sliderChange" bindchanging="sliderChanging" />
+  </view>
+  <view class="controls">
+    <button bindtap="playAudio">播放</button>
+    <button bindtap="pauseAudio">暂停</button>
+    <button bindtap="fastForwardAudio">快进 3 秒</button>
+    <button bindtap="rewindAudio">快退 3 秒</button>
+  </view>
+  <view class="controls">
+    <button bindtap="changePlaybackRate">加速 0.5 倍</button>
+    <button bindtap="decreasePlaybackRate">减速 0.5 倍</button>
+    <button bindtap="resetPlaybackRate">恢复播放速度</button>
+    <text>当前播放速度：{{playbackRate}}x</text>
+  </view>
 </view>
+<!-- <view class="audio-player">
+  <audio src="{{audioSrc}}" controls poster="{{poster}}" name="{{songName}}" author="{{songAuthor}}" />
+  <text>歌曲地址：{{audioSrc}}</text>
+</view> -->
