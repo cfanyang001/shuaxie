@@ -1,0 +1,5 @@
+<view class="switch-container">
+  <text>开启通知：</text>
+  <switch checked="{{switchChecked}}" type="checkbox" bindchange="onSwitchChange"></switch>
+</view>
+<rich-text nodes="{{nodes}}"></rich-text>

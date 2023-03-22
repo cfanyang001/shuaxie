@@ -1,0 +1,4 @@
+<view class="container">
+  <audio-player audioSrc="http://downsc.chinaz.net/Files/DownLoad/sound1/201906/11582.mp3"></audio-player>
+  <!-- 其他页面内容 -->
+</view>

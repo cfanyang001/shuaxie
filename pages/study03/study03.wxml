@@ -1,0 +1,4 @@
+<!-- 在页面中引入腾讯地图组件 -->
+<view class="map-container">
+  <map id="myMap" show-location="true" enable-overlooking="true" style="width: 100%; height: 100%;"></map>
+</view>

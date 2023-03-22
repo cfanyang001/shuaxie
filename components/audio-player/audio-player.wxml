@@ -1,0 +1,7 @@
+<view class="audio-player">
+  <button bindtap="playAudio">播放</button>
+  <button bindtap="pauseAudio">暂停</button>
+  <button bindtap="rewindAudio">快退 3 秒</button>
+  <button bindtap="fastForwardAudio">快进 3 秒</button>
+  <button bindtap="changePlaybackRate">切换播放速度</button>
+</view>
